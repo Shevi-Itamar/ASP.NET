@@ -38,6 +38,7 @@ namespace lessson1.Services
 
             
             listJewels.Remove(oldJewel);
+            nextId--;
         }
 
         public void Update(Jewel newJewel)
@@ -51,5 +52,12 @@ namespace lessson1.Services
 
         public int Count { get =>  listJewels.Count();}
     }
+
+
+    public static class JewelServiceHelper{
+        public static void AddJewelService(this IServiceCollection BuilderService){
+            BuilderService.AddSingleton<IJewelService, JewelService>();
+        }
+    } 
 
 }
