@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using lessson1.Models;
 using lessson1.Interfaces;
+using lessson1.Exceptions;
 namespace lessson1.Controllers;
 
 [ApiController]
@@ -26,9 +27,13 @@ public class JewelController : ControllerBase
         {
             var jewel = JewelService.Get(id);
 
-            if (jewel == null)
-                return NotFound();
-
+            
+    if (jewel == null)
+    {
+        // זורק חריגה מותאמת
+        throw new ItemNotFoundException($"Oops! The requested item with the ID {id} was not found in our system. Please check the ID and try again.");
+    
+    }
             return jewel;
         }
 

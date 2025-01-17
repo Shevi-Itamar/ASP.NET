@@ -1,5 +1,6 @@
 using lessson1.Services;
 using lessson1.Interfaces;
+using lessson1.MiddleWares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +32,7 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseCors("AllowAllOrigins");
-
+app.UseCatchMiddleWare();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
