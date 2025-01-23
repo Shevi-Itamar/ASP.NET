@@ -1,4 +1,4 @@
-using lessson1.Exceptions;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace lessson1.MiddleWares
 {
@@ -11,21 +11,30 @@ namespace lessson1.MiddleWares
             _next = next;
         }
 
-        public async Task Invoke(HttpContext httpContext)
+public async Task Invoke(HttpContext httpContext)
         {
+
             try
             {
                 await _next.Invoke(httpContext);
             }
-            catch (ItemNotFoundException ex)
+            catch (Exception ex)
             {
-                httpContext.Response.StatusCode = 404;
-                httpContext.Response.Clear();
-                await httpContext.Response.WriteAsync(ex.Message);
-            }
-        }
-    }
+  
+                    httpContext.Response.Clear();
+                    httpContext.Response.StatusCode = 400;
+                    httpContext.Response.ContentType = "application/json";
 
+                    var errorResponse = new
+                    {
+                        Error = "Bad Request",
+                        Message = ex.Message
+                    };
+
+                    await httpContext.Response.WriteAsJsonAsync(errorResponse);
+                }
+    }
+    }
     public static class MiddlewareExtensions
     {
 
