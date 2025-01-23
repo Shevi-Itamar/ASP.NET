@@ -32,7 +32,11 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseCors("AllowAllOrigins");
+
+app.UseLoggingMiddleware();
+
 app.UseCatchMiddleWare();
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

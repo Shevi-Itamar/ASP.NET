@@ -32,6 +32,7 @@ public async Task Invoke(HttpContext httpContext)
                     };
 
                     await httpContext.Response.WriteAsJsonAsync(errorResponse);
+                    
                 }
     }
     }
