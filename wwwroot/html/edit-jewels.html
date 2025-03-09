@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>עריכת תכשיטים</title>
+    <link rel="stylesheet" href="../css/edit-jewels.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ניהול תכשיטים</h1>
+
+        <!-- כפתורים לניהול תכשיטים -->
+        <div class="actions">
+            <button onclick="showCreateForm()">➕ יצירת תכשיט חדש</button>
+            <button onclick="showUpdateForm()">✏️ עדכון תכשיט</button>
+            <button onclick="showDeleteForm()">🗑️ מחיקת תכשיט</button>
+        </div>
+
+        <!-- תצוגת התכשיטים -->
+        <div id="jewels-list-container">
+            <h2>כל התכשיטים במלאי</h2>
+            <table id="jewels-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>שם תכשיט</th>
+                        <th>משקל</th>
+                    </tr>
+                </thead>
+                <tbody id="jewels-list"></tbody>
+            </table>
+        </div>
+
+        <div id="form-container">
+            <form id="create-form" class="hidden" onsubmit="createJewel(event)">
+                <h2>➕ יצירת תכשיט חדש</h2>
+                <input type="text" id="create-name" placeholder="שם תכשיט" required>
+                <input type="number" id="create-weight" placeholder="משקל (גרם)" required>
+                <button type="submit">צור</button>
+            </form>
+
+            <form id="update-form" class="hidden" onsubmit="updateJewel(event)">
+                <h2>✏️ עדכון תכשיט</h2>
+                <input type="number" id="update-id" placeholder="מזהה תכשיט" required>
+                <input type="text" id="update-name" placeholder="שם חדש">
+                <input type="number" id="update-weight" placeholder="משקל חדש">
+                <button type="submit">עדכן</button>
+            </form>
+
+            <form id="delete-form" class="hidden" onsubmit="deleteJewel(event)">
+                <h2>🗑️ מחיקת תכשיט</h2>
+                <input type="number" id="delete-id" placeholder="מזהה תכשיט" required>
+                <button type="submit">מחק</button>
+            </form>
+        </div>
+    </div>
+    <div id="message-container" style="display: none;"></div>
+
+    <script src="../js/edit-jewels.js"></script>
+</body>
+</html>

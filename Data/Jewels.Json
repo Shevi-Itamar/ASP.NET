@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "Name": "Gold Ring",
+    "Weight": 3.5
+  },
+  {
+    "Id": 2,
+    "Name": "Silver Necklace",
+    "Weight": 5.2
+  },
+  {
+    "Id": 3,
+    "Name": "Diamond Earrings",
+    "Weight": 1.8
+  },
+  {
+    "Id": 4,
+    "Name": "Platinum Bracelet",
+    "Weight": 4.0
+  },
+  {
+    "Id": 5,
+    "Name": "Pearl Necklace",
+    "Weight": 6.3
+  },
+  {
+    "Id": 6,
+    "Name": "Emerald Ring",
+    "Weight": 2.1
+  },
+  {
+    "Id": 7,
+    "Name": "Ruby Earrings",
+    "Weight": 3.0
+  },
+  {
+    "Id": 8,
+    "Name": "Ruby Earrings",
+    "Weight": 5.0
+  }
+]

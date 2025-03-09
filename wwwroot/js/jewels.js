@@ -1,6 +1,22 @@
-const uri = 'http://localhost:5068/jewel';
+const uri = 'https://localhost:5001/jewel';
 let jewels = [];
 
+document.addEventListener("DOMContentLoaded", function () {
+    let token = localStorage.getItem("token");
+    if (!token) {
+        window.location.href = "../index.html";
+    } else {
+        let payload = JSON.parse(atob(token.split('.')[1])); 
+        if (payload.Role === "Admin") {
+            document.getElementById("admin-options").style.display = "block";
+        }
+    }
+});
+
+function logout() {
+    localStorage.removeItem("token");
+    window.location.href = "../index.html";
+}
 function getItems() {
     fetch(uri)
         .then(response => response.json())
@@ -12,7 +28,6 @@ function addItem() {
     const addNameTextbox = document.getElementById('add-name');
     const addWeightTextbox = document.getElementById('add-weight');
     const item = {
-        
         name: addNameTextbox.value.trim(),
         weight: addWeightTextbox.value.trim()
     };
@@ -119,7 +134,6 @@ function _displayItems(data) {
         td1.appendChild(id)
         
         let td2 = tr.insertCell(1);
-        // let textNode = document.createTextNode(item.name);
 
         td2.appendChild(name);
 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>ניהול משתמשים</title>
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+
+</head>
+<body>
+    <h1>ניהול משתמשים</h1>
+    
+    <a href="edit-jewels.html" class="manageJewelsButton">לניהול תכשיטים</a>
+
+    <button onclick="getAllUsers()">📋 הצג משתמשים</button>
+    <button onclick="toggleAddUserModal()">➕ הוסף משתמש</button>
+    <button onclick="logout()">🚪 התנתק</button>
+
+    <table id="users-table" style="display: none;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>שם</th>
+                <th>סיסמה</th>
+                <th>אימייל</th>
+                <th>טלפון</th>
+                <th>כתובת</th>
+                <th>הרשאה</th>
+                <th>עגלה</th>
+                <th>פעולות</th>
+            </tr>
+        </thead>
+        <tbody id="users-list"></tbody>
+    </table>
+
+    <!-- מודל להוספת משתמש -->
+    <div id="addUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addUserModal')">&times;</span>
+            <h2>הוספת משתמש חדש</h2>
+            <input id="newUserName" type="text" placeholder="שם משתמש">
+            <input id="newUserEmail" type="email" placeholder="אימייל">
+            <input id="newUserPhone" type="text" placeholder="טלפון">
+            <input id="newUserAddress" type="text" placeholder="כתובת">
+            <input id="newUserPassword" type="password" placeholder="סיסמה">
+            <select id="newUserPermission">
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+            </select>
+            <button onclick="addUser()">✔️ הוסף</button>
+        </div>
+    </div>
+
+    <!-- מודל לעריכת משתמש -->
+    <div id="editUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editUserModal')">&times;</span>
+            <h2>עריכת משתמש</h2>
+            <input id="editUserId" type="hidden">
+            <input id="editUserName" type="text">
+            <input id="editUserPassword" type="text">
+            <input id="editUserPhone" type="text">
+            <input id="editUserAddress" type="text">
+            <input id="editUserEmail" type="email">
+            <select id="editUserPermission" disabled>
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+            </select>
+            <button onclick="updateUser()">💾 עדכן</button>
+        </div>
+    </div>
+
+    <!-- מודל להצגת עגלה -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cartModal')">&times;</span>
+            <h2>עגלת הקניות</h2>
+            <ul id="cartItems"></ul>
+        </div>
+    </div>
+    <!-- Modal להוספת תכשיטים -->
+    <div id="addJewelsModal" class="modal">
+        <div class="modal-content">
+            <h4>בחר תכשיטים להוספה לעגלה</h4>
+            <ul id="jewelsList"></ul>
+            <button onclick="addJewelsToCart()">הוסף לעגלה</button>
+            <button onclick="closeModal('addJewelsModal')">סגור</button>
+            <input type="hidden" id="userIdForAddingJewels" />
+        </div>
+    </div>
+
+    <!-- Modal for selecting jewels -->
+    <div id="jewelModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Select Jewels to Add to Cart</h2>
+            <ul id="jewelList"></ul>
+            <button id="addToCartButton">Add to Cart</button>
+        </div>
+    </div>
+    
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

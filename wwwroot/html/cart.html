@@ -1,0 +1,34 @@
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>צפייה בתכשיטים והוספה לסל</title>
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="logout()">🚪 התנתקות</button>
+        <h1>צפייה בתכשיטים והוספה לסל</h1>
+
+        <table id="jewels-list">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>שם תכשיט</th>
+                    <th>משקל (גרם)</th>
+                    <th>הוסף לסל</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div id="cart-container">
+            <h2>הסל שלי</h2>
+            <ul id="cart-list"></ul>
+            <button id="checkout-btn">בצע רכישה</button>
+        </div>
+    </div>
+    <div id="message-container" style="display: none; padding: 10px; margin-top: 20px; border-radius: 5px;"></div>
+
+    <script src="../js/cart.js"></script>
+</body>
+</html>

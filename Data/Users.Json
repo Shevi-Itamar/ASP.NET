@@ -1,0 +1,110 @@
+[
+  {
+    "Id": 1,
+    "Name": "Avi",
+    "Permission": "Admin",
+    "Password": "1111",
+    "Address": "Modiin",
+    "Email": "s0556764078@gmail.com",
+    "Phone": "055",
+    "Cart": [
+      {
+        "Id": 5,
+        "Name": "Avi",
+        "Weight": 1.0
+      },
+      {
+        "Id": 1,
+        "Name": "Gold Ring",
+        "Weight": 3.5
+      },
+      {
+        "Id": 1,
+        "Name": "Gold Ring",
+        "Weight": 3.5
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Shevi",
+    "Permission": "User",
+    "Password": "1234",
+    "Address": "baba",
+    "Email": "s0556764078@gmail.com",
+    "Phone": "055",
+    "Cart": [
+      {
+        "Id": 7,
+        "Name": "Ruby Earrings",
+        "Weight": 3.0
+      },
+      {
+        "Id": 6,
+        "Name": "Emerald Ring",
+        "Weight": 2.1
+      },
+      {
+        "Id": 5,
+        "Name": "Pearl Necklace",
+        "Weight": 6.3
+      },
+      {
+        "Id": 9,
+        "Name": "bla",
+        "Weight": 55.0
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "Tamar",
+    "Permission": "User",
+    "Password": "22",
+    "Address": "Modiin",
+    "Email": "T@gmail.com",
+    "Phone": "0582",
+    "Cart": [
+      {
+        "Id": 3,
+        "Name": "Bracelet",
+        "Weight": 4.0
+      },
+      {
+        "Id": 4,
+        "Name": "Ring2",
+        "Weight": 41.0
+      },
+      {
+        "Id": 1,
+        "Name": "Gold Ring",
+        "Weight": 3.5
+      },
+      {
+        "Id": 4,
+        "Name": "Platinum Bracelet",
+        "Weight": 4.0
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "רחלי",
+    "Permission": "User",
+    "Password": "5",
+    "Address": "cvb",
+    "Email": "s0556764078@gmail.com",
+    "Phone": "0535",
+    "Cart": null
+  },
+  {
+    "Id": 5,
+    "Name": "shevi",
+    "Permission": "Admin",
+    "Password": "4564",
+    "Address": "cvb",
+    "Email": "rnlm",
+    "Phone": "0535",
+    "Cart": null
+  }
+]

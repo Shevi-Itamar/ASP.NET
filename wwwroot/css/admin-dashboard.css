@@ -1,0 +1,330 @@
+/* כלליים */
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* טבלה */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* כפתורים */
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button[style="background: red;"] {
+    background-color: #d9534f;
+}
+
+button[style="background: red;"]:hover {
+    background-color: #c9302c;
+}
+
+button:disabled {
+    background-color: #ccc;
+}
+
+/* עגלת קניות */
+#cart-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+#cart-container h3 {
+    margin-bottom: 10px;
+}
+
+#cart-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-container li {
+    margin-bottom: 5px;
+}
+
+/* מודל */
+.modal {
+    display: none; /* נשאר ככה עד שהמודל יופיע בתכנה */
+    position: fixed;
+    z-index: 1000; /* תוודא שהמודל יישאר מעל כל התוכן */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal input, .modal select {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 80%;
+}
+
+.modal button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* רשימות */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    background: #ddd;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Style for the modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depends on screen size */
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for the add user modal */
+#addUserModal, #editUserModal, #addJewelsModal {
+    display: none; /* Hidden by default */
+}
+
+/* Styling for the User table */
+table, th, td {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Table row hover effect */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for the buttons */
+button {
+    padding: 8px 16px;
+    margin: 4px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Color for Edit button */
+button:hover {
+    background-color: #ddd;
+}
+
+/* Red color for Delete button */
+button[style="background: red;"]:hover {
+    background-color: #f44336;
+}
+
+/* Style for the Cart Modal */
+#cartModal {
+    display: none;
+}
+
+#cartModal .modal-content {
+    max-width: 500px;
+}
+
+/* Styling for Jewel list */
+#jewelsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#jewelsList li {
+    margin: 8px 0;
+}
+
+#jewelsList label {
+    margin-left: 8px;
+}
+
+/* Styling for the form inputs */
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="hidden"] {
+    display: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.manageJewelsButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.manageJewelsButton:hover {
+    background-color: #45a049;
+}

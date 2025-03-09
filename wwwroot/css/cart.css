@@ -1,0 +1,161 @@
+/* סגנון כללי לדף */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* סגנון לטבלה */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* סגנון להסתרת תצוגה */
+.hidden {
+    display: none;
+}
+
+/* סגנון להודעות */
+#message-container {
+    background-color: #F44336;
+    color: white;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+}
+
+/* סגנון לסל */
+#cart-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#cart-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-list li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-list li button {
+    background-color: #f44336;
+}
+
+#cart-list li button:hover {
+    background-color: #e53935;
+}
+
+/* סגנון לכפתור "בצע רכישה" */
+#checkout-btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#checkout-btn:hover {
+    background-color: #1976D2;
+}
+
+/* סגנון לכפתור הוספה לסל */
+button {
+    background-color: #8BC34A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #7CB342;
+}
+#message-container {
+    background-color: #4CAF50;  /* צבע ברירת מחדל להצלחה */
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.cart-item button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.cart-item button:hover {
+    background-color: #d32f2f;
+}
+#cart-container {
+    margin-top: 20px;
+}

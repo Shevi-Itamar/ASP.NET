@@ -8,7 +8,7 @@ namespace lessson1.Interfaces
     {
         List<Jewel> GetAll();
 
-        Jewel Get(int id);
+        Jewel? Get(int id);
 
         void Add(Jewel newJewel);
 
