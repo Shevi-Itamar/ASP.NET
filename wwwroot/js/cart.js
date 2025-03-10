@@ -46,9 +46,8 @@ function showAllJewels() {
     .catch(error => console.error("שגיאה בהבאת התכשיטים:", error));
 }
 
-// הוספת תכשיט לסל
 function addToCart(jewelId, name, weight) {
-    const userId = getUserIdFromToken(); // הוצאת מזהה המשתמש מה-token
+    const userId = getUserIdFromToken(); 
 
     const body = {
         ID: jewelId
@@ -62,12 +61,12 @@ function addToCart(jewelId, name, weight) {
         },
         body: JSON.stringify(body)
     })
-    .then(response => response.text()) // מקבלים את התגובה כ-plain text
+    .then(response => response.text()) 
     .then(data => {
         if (data === "Item added to cart") {
             showMessage(`${name} הוסף/ה לסל!`, true);
-            loadCart(); // עדכון הסל אחרי ההוספה
-            showAllJewels(); // הצגת התכשיטים מחדש
+            loadCart(); 
+            showAllJewels(); 
         } else {
             showMessage("שגיאה בהוספת התכשיט לסל", false);
         }
@@ -78,7 +77,6 @@ function addToCart(jewelId, name, weight) {
     });
 }
 
-// הצגת הודעות למשתמש
 function showMessage(message, isSuccess) {
     const messageContainer = document.getElementById("message-container");
     messageContainer.innerText = message;
@@ -92,7 +90,7 @@ function showMessage(message, isSuccess) {
 }
 
 function loadCart() {
-    const userId = getUserIdFromToken(); // קבל את מזהה המשתמש מה-token
+    const userId = getUserIdFromToken(); 
     if (!userId) {
         console.error("לא ניתן למצוא את מזהה המשתמש מה-token.");
         return;
@@ -113,9 +111,9 @@ function loadCart() {
         return response.json();
     })
     .then(cart => {
-        console.log("הסל שהתקבל:", cart); // לוג להדפסת הסל
+        
         const cartList = document.getElementById("cart-list");
-        cartList.innerHTML = ''; // ניקוי הסל לפני הצגת פריטים חדשים
+        cartList.innerHTML = ''; 
 
         if (Array.isArray(cart) && cart.length > 0) {
             cart.forEach(jewel => {
@@ -136,9 +134,8 @@ function loadCart() {
     });
 }
 
-// הסרת פריט מהסל
 function removeFromCart(jewelId) {
-    const userId = getUserIdFromToken(); // הוצאת מזהה המשתמש מה-token
+    const userId = getUserIdFromToken();
 
     fetch(`${apiBaseUrl}/${userId}/${jewelId}`, {
         method: "DELETE",
@@ -146,12 +143,12 @@ function removeFromCart(jewelId) {
             "Authorization": `Bearer ${localStorage.getItem("token")}`
         }
     })
-    .then(response => response.text()) // מקבלים את התגובה כ-plain text
+    .then(response => response.text()) 
     .then(data => {
         if (data === "Item removed from cart") {
-            loadCart(); // עדכון הסל אחרי ההסרה
+            loadCart(); 
             showMessage("התכשיט הוסר מהסל!", true);
-            showAllJewels(); // הצגת התכשיטים מחדש
+            showAllJewels(); 
         } else {
             showMessage("שגיאה בהסרת התכשיט מהסל", false);
         }
@@ -162,7 +159,6 @@ function removeFromCart(jewelId) {
     });
 }
 
-// פונקציה להוציא את מזהה המשתמש מה-token
 function getUserIdFromToken() {
     const token = localStorage.getItem("token");
     
@@ -170,7 +166,6 @@ function getUserIdFromToken() {
         return null;
     }
 
-    // פיצול ה-token לחלקים
     const payload = token.split('.')[1];
     
     const decodedPayload = atob(payload);

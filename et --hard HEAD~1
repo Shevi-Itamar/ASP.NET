@@ -1,0 +1,73 @@
+[33mcommit 077ef46d36391c675a6feaffae9d02b4163b1a68[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 699f3f8 f9adb80
+Author: Shevi <s0556764078@gmail.com>
+Date:   Mon Mar 10 01:53:11 2025 +0200
+
+    Merge branch 'main' of https://github.com/Shevi-Itamar/ASP.NET
+
+[33mcommit 699f3f84a238555f4087326c5f22aae6ad946851[m
+Author: Shevi <s0556764078@gmail.com>
+Date:   Mon Mar 10 01:52:56 2025 +0200
+
+    FinalProject-API
+
+[33mcommit f9adb8041859f4e6b3bd094a0b04cbf4e2104ae5[m
+Author: tamarP85 <9745544b@gmail.com>
+Date:   Sun Mar 9 18:05:44 2025 +0200
+
+    without dataBase
+
+[33mcommit d1c11edfe3cc220756c10b5a34168558205d8135[m
+Author: Shevi-Itamar <s0556764078@gmail.com>
+Date:   Thu Jan 23 21:47:20 2025 +0200
+
+    lesson_7
+    
+    Add logging middleware to write requests and errors to logs.txt
+
+[33mcommit 8998c5a127099e5f419e89d7e3be6ca81cc4c643[m
+Author: Shevi-Itamar <s0556764078@gmail.com>
+Date:   Thu Jan 23 19:43:01 2025 +0200
+
+    Lesson_6 Fix - Improved Error Handling in Middleware
+    
+    Fixed error handling in middleware:
+    - Catching 500-level errors and modifying the response to return a 400 error instead of the default error message.
+
+[33mcommit e787489b8190ed9e9a5a4f53d8a01c71e784555f[m
+Author: Shevi-Itamar <s0556764078@gmail.com>
+Date:   Fri Jan 17 03:03:58 2025 +0200
+
+    lesson_6
+    
+      Add middleware to handle 'not found' errors on GET requests
+
+[33mcommit b0a09e34ccb5c767e1e9b631ea0658a4023f69a2[m
+Author: Shevi-Itamar <s0556764078@gmail.com>
+Date:   Tue Jan 7 20:14:41 2025 +0200
+
+    lesson_5
+    
+    Adding html and js
+
+[33mcommit 3c76b8c962c4a324c779985f551f16fa9d01ea20[m
+Author: Shevi-Itamar <s0556764078@gmail.com>
+Date:   Wed Dec 25 01:13:27 2024 +0200
+
+    lesson_4
+    
+    interface and services
+
+[33mcommit 70e391a0477d858fc16b62e6882a0f181b46cc3a[m
+Author: Shevi-Itamar <s0556764078@gmail.com>
+Date:   Thu Dec 19 00:30:36 2024 +0200
+
+    lesson_2
+    
+    create CRUD
+
+[33mcommit 2018283bd858aab8183f2d280ec786c47e1f17f0[m
+Author: Shevi-Itamar <s0556764078@gmail.com>
+Date:   Thu Dec 19 00:27:01 2024 +0200
+
+    Initial commit

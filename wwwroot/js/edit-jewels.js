@@ -4,7 +4,6 @@ window.onload = function() {
     showAllJewels();
 };
 
-// הצגת כל התכשיטים
 function showAllJewels() {
     fetch(uri, {
         method: "GET",
@@ -33,7 +32,6 @@ function showAllJewels() {
     .catch(error => showMessage("❌ שגיאה בהצגת התכשיטים: " + error, false));
 }
 
-// הצגת הודעות למשתמש
 function showMessage(message, isSuccess) {
     const messageContainer = document.getElementById("message-container");
     messageContainer.innerText = message;
@@ -48,32 +46,27 @@ function showMessage(message, isSuccess) {
     setTimeout(() => { messageContainer.style.display = "none"; }, 4000);
 }
 
-// הצגת טופס יצירת תכשיט
 function showCreateForm() {
     hideAllForms();
     document.getElementById("create-form").classList.remove("hidden");
 }
 
-// הצגת טופס עדכון תכשיט
 function showUpdateForm() {
     hideAllForms();
     document.getElementById("update-form").classList.remove("hidden");
 }
 
-// הצגת טופס מחיקת תכשיט
 function showDeleteForm() {
     hideAllForms();
     document.getElementById("delete-form").classList.remove("hidden");
 }
 
-// הסתרת כל הטפסים
 function hideAllForms() {
     document.getElementById("create-form").classList.add("hidden");
     document.getElementById("update-form").classList.add("hidden");
     document.getElementById("delete-form").classList.add("hidden");
 }
 
-// יצירת תכשיט חדש
 function createJewel(event) {
     event.preventDefault();
     const name = document.getElementById("create-name").value;
@@ -90,8 +83,8 @@ function createJewel(event) {
     .then(response => {
         if (response.ok) {
             showMessage("✅ התכשיט נוצר בהצלחה!", true);
-            showAllJewels();  // עדכון התכשיטים
-            hideAllForms();  // סגירת הטופס
+            showAllJewels(); 
+            hideAllForms(); 
         } else {
             showMessage("❌ שגיאה ביצירת התכשיט", false);
         }
@@ -99,7 +92,6 @@ function createJewel(event) {
     .catch(error => showMessage("❌ שגיאה ביצירת התכשיט: " + error, false));
 }
 
-// עדכון תכשיט
 function updateJewel(event) {
     event.preventDefault();
     const id = document.getElementById("update-id").value;
@@ -117,8 +109,8 @@ function updateJewel(event) {
     .then(response => {
         if (response.ok) {
             showMessage("✅ התכשיט עודכן בהצלחה!", true);
-            showAllJewels();  // עדכון התכשיטים
-            hideAllForms();  // סגירת הטופס
+            showAllJewels();  
+            hideAllForms();  
         } else {
             showMessage("❌ שגיאה בעדכון התכשיט", false);
         }
@@ -126,7 +118,6 @@ function updateJewel(event) {
     .catch(error => showMessage("❌ שגיאה בעדכון התכשיט: " + error, false));
 }
 
-// מחיקת תכשיט
 function deleteJewel(event) {
     event.preventDefault();
     const id = document.getElementById("delete-id").value;
@@ -140,7 +131,7 @@ function deleteJewel(event) {
     .then(response => {
         if (response.ok) {
             showMessage("✅ התכשיט נמחק!", true);
-            showAllJewels(); // עדכון התכשיטים
+            showAllJewels(); 
             hideAllForms();
         } else {
             showMessage("❌ שגיאה במחיקה", false);
@@ -149,7 +140,6 @@ function deleteJewel(event) {
     .catch(error => showMessage("❌ שגיאה במחיקה: " + error, false));
 }
 
-// פונקציה יצירת כפתור Logout
 function logout() {
     localStorage.removeItem("token");
     window.location.href = "../index.html";

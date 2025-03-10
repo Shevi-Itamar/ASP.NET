@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("Logs/audit-log.txt", rollingInterval: RollingInterval.Day)
-    .MinimumLevel.Information() // רמת הלוג תהיה Information ומעלה
+    .MinimumLevel.Information()
     .CreateLogger();
 
 

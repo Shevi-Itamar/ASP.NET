@@ -17,7 +17,6 @@ public class AuditLogMiddleware
         var sw = new Stopwatch();
         sw.Start();
 
-        // נרשום את הזמן של הבקשה, הפתיחה והמשתמש ששלח את הבקשה ברמה של Information
         Log.Information($"{c.Request.Path}.{c.Request.Method} took {sw.ElapsedMilliseconds}ms."
                         + $" User: {c.User?.FindFirst("userName")?.Value ?? "unknown"}");
 
